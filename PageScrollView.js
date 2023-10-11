@@ -322,7 +322,7 @@ class PageScrollView extends Component{
         let arr=[];
         if(HorV==='h'){
             //当滚动到第一张时的左边空白部分
-            arr.push(<View key={-2} style={{width:(viewWidth-width)/2,height:viewHeight,backgroundColor:'#0000'}}/>);
+          arr.push(<View key={-2} style={{width:isNaN((viewWidth-width)/2)?0:(viewWidth-width)/2,height:viewHeight,backgroundColor:'#0000'}}/>);
         }else {
             //竖直ScrollView时
             arr.push(<View key={-2} style={{width:viewWidth,height:(viewHeight-height)/2,backgroundColor:'#0000'}}/>);
@@ -374,7 +374,7 @@ class PageScrollView extends Component{
         }
         if(HorV==='h'){
             //当滚动到最后一张时的右边的空白部分
-            arr.push(<View key={-3} style={{width:(viewWidth-width)/2,height:viewHeight,backgroundColor:'#0000'}}/>);
+            arr.push(<View key={-3} style={{width:isNaN((viewWidth-width)/2)?0:(viewWidth-width)/2,height:viewHeight,backgroundColor:'#0000'}}/>);
         }else {
             //竖直方向
             arr.push(<View key={-3} style={{width:viewWidth,height:(viewHeight-height)/2,backgroundColor:'#0000'}}/>);
